@@ -6,7 +6,7 @@ object Day1 extends App {
 
   // a. Types
          // Todo es un objeto :3
-         def a: Function[Int, Int] // objeto que actua como funcion
+         def a: Function[Int, Int] = ??? // objeto que actua como funcion
 
           case class Random()
 
