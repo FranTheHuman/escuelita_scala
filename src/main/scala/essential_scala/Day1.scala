@@ -5,8 +5,6 @@ object Day1 extends App {
   // 2 - TYPES / EXPRESSIONS / VALUES
 
   // a. Types
-         // Todo es un objeto :3
-         def a: Function[Int, Int] = ??? // objeto que actua como funcion
 
           case class Random()
 
@@ -17,6 +15,7 @@ object Day1 extends App {
             case Char => ()
             case Boolean => ()
             case Int => ()
+            case Option => ()
             // case String => () -> String no funciona - Averiguar porque
             case _ => ()
           }
@@ -36,9 +35,15 @@ object Day1 extends App {
   // v. Values ----
         // espacio en memoria
 
+        // Todos los values son objetos :3
+        def a: Function[Int, Int] = ??? // objeto que actua como funcion
+
   // 3 - CLASS / OBJECTS
 
   // Class Scala = Class Java (pero mas linda/acotada)
+
+    // Template para crear objetos
+
     class Person(atributo1: String = "") {
 
       private val atributo2 = "Cindy despertate"
@@ -49,5 +54,9 @@ object Day1 extends App {
 
     }
     new Person("Marce es mi idolo")
+
+  // Objetos Scala
+  //    siempre son singletons
+  //  = Clase ya instanciada creando un objeto
 
 }
