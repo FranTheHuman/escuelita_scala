@@ -75,14 +75,20 @@ object Day5 extends App {
 
   // Caso base = identity = elemento que no cambia el resultado
 
-
   def sum_2(list: List[Int]): Int =
     list match {
       case Nil => 0
       case ::(head, next) => head + sum_2(next)
     }
 
-  println(sum_2((1 to 10000).toList)) // ROMPE
+  // println(sum_2((1 to 10000).toList)) // ROMPE
 
+  @tailrec
+  def sumTail(list: List[Int], total: Int = 0): Int =
+    list match {
+      case Nil => total
+      case ::(head, next) => sumTail(next, total + head)
+    }
 
+  println(sumTail((1 to 10000).toList))
 }
