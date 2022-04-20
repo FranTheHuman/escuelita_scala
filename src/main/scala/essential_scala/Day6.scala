@@ -50,10 +50,10 @@ object Day6 extends App {
   // --- 5.2 Functions ---
 
   sealed trait IntListAbstraction extends IntList {
-//    def abstraction(end: Int, f: ???): Int =
+//    def funcion(end: Int, f: (Int, Int) => Int): Int =
 //      this match {
 //        case End => end
-//        case Pair(hd, tl) => f(hd, tl.abstraction(end, f))
+//        case Pair(hd, tl) => f(hd, tl.funcion(end, f))
 //      }
   }
 
