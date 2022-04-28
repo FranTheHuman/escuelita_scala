@@ -66,6 +66,14 @@ object Day8 extends App {
 //     final case class Pair[A](head: A, tail: LinkedList[A]) extends LinkedList[A]
 //     final case class End[A]() extends LinkedList[A]
 
-
+  private def getCaptcha_ApiKey(fromHost: Option[String]): String = {
+    fromHost match {
+      case Some(fromHost2) if fromHost2.contains("decidir") => "" //config.secret.split(",")(0)
+      case Some(fromHost2) if fromHost2.contains("payway") => "" //config.secret.split(",")(1)
+      case None =>
+       //  logger.error("URL is not valid")
+        ""
+    }
+  }
 
 }
